@@ -3,180 +3,418 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Sowmya — Marketing, GTM & Growth. Strategy, go-to-market, demand generation and growth.">
-<title>Sowmya — Marketing, GTM & Growth</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     SEO — replace YOURDOMAIN.com with your real domain everywhere
+     (also in robots.txt, sitemap.xml and CNAME).
+     ============================================================ -->
+<title>Sowmya — Marketing, GTM &amp; Growth</title>
+<meta name="description" content="Sowmya — Marketing, GTM & Growth. Marketing strategy, go-to-market, demand generation, ABM, campaigns and marketing operations — owned from strategy to execution.">
+<link rel="canonical" href="https://YOURDOMAIN.com/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Sowmya">
+<meta name="theme-color" content="#FFF9F0">
+
+<!-- Open Graph (LinkedIn, WhatsApp, Slack previews) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sowmya — Marketing, GTM & Growth">
+<meta property="og:title" content="Sowmya — Marketing, GTM & Growth">
+<meta property="og:description" content="I make marketing move. Strategy, GTM, demand generation and growth — from the business problem to the work in market.">
+<meta property="og:url" content="https://YOURDOMAIN.com/">
+<meta property="og:image" content="https://YOURDOMAIN.com/assets/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sowmya — Marketing, GTM & Growth. I make marketing move.">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sowmya — Marketing, GTM & Growth">
+<meta name="twitter:description" content="I make marketing move. Strategy, GTM, demand generation and growth — from the business problem to the work in market.">
+<meta name="twitter:image" content="https://YOURDOMAIN.com/assets/images/og-image.png">
+
+<!-- Icons -->
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+<!-- Self-hosted fonts: preload the two used above the fold -->
+<link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="cursor-dot"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
 
-<nav class="nav">
-  <a class="logo" href="#top">SOWMYA<span>®</span></a>
-  <div class="nav-links">
-    <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
-  </div>
-  <a class="nav-cta" href="#contact">Let's talk <b>↗</b></a>
-</nav>
+<header class="nav" id="top">
+  <a class="logo" href="#main" aria-label="Sowmya — back to top">SOWMYA<span>®</span></a>
+  <nav class="nav-links" id="nav-links" aria-label="Main">
+    <a href="#work">Work</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-links-cta" href="#contact">Work with me <span aria-hidden="true">↗</span></a>
+  </nav>
+  <a class="nav-cta" href="#contact">Let's talk <b aria-hidden="true">↗</b></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+    <span class="nav-toggle-label">Menu</span><i aria-hidden="true"></i>
+  </button>
+</header>
 
-<main id="top">
-<section class="hero">
+<main id="main">
+
+<!-- ========================= HERO ========================= -->
+<section class="hero" aria-labelledby="hero-title">
   <div class="hero-grid">
     <div class="hero-copy">
-      <div class="eyebrow"><span class="pulse"></span> MARKETING / GTM / GROWTH</div>
-      <h1>I make<br><em>marketing</em><br>move<span>.</span></h1>
-      <p class="hero-sub">Strategy, GTM, demand generation and growth — built to turn attention into action.</p>
+      <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> MARKETING <i>/</i> GTM <i>/</i> GROWTH</p>
+      <h1 id="hero-title">I make<br><em>marketing</em><br>move<span>.</span></h1>
+      <p class="hero-sub">Marketing. GTM. Growth. I take products, brands and pipelines from <span class="serif">the business problem</span> to the work in market — owning the strategy <em>and</em> the execution.</p>
       <div class="hero-actions">
-        <a class="btn btn-dark" href="#work">See my work <span>↗</span></a>
-        <a class="text-link" href="#contact">Work with me <span>→</span></a>
+        <a class="btn btn-dark" href="#work">View my work <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-outline" href="#contact">Work with me <span aria-hidden="true">→</span></a>
       </div>
+      <p class="hero-audience">
+        <a href="#services">For clients <span aria-hidden="true">→</span> what I solve</a>
+        <a href="#experience">For hiring teams <span aria-hidden="true">→</span> my experience</a>
+      </p>
     </div>
-    <div class="hero-art">
+
+    <div class="hero-art" aria-hidden="true">
       <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
       <div class="hero-word">GROW<br>TH</div>
-      <div class="sticker sticker-green">GTM<br>→</div>
-      <div class="sticker sticker-yellow">DEMAND<br>↗</div>
-      <div class="sticker sticker-coral">ABM<br>+</div>
-      <div class="sticker sticker-blue">AI<br>⚡</div>
+      <div class="sticker sticker-green" data-depth="18">GTM<br>→</div>
+      <div class="sticker sticker-yellow" data-depth="-14">DEMAND<br>↗</div>
+      <div class="sticker sticker-coral" data-depth="22">ABM<br>+</div>
+      <div class="sticker sticker-blue" data-depth="-20">AI<br>⚡</div>
+      <div class="sticker sticker-lavender" data-depth="10">OPS<br>⚙</div>
       <div class="hero-note">strategy<br>× execution</div>
     </div>
   </div>
-  <div class="scroll-note">SCROLL TO EXPLORE <span>↓</span></div>
+  <a class="scroll-note" href="#proof">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
 </section>
 
-<section class="ticker"><div class="ticker-track"><span>STRATEGY</span><i>✦</i><span>GTM</span><i>✦</i><span>DEMAND</span><i>✦</i><span>GROWTH</span><i>✦</i><span>CAMPAIGNS</span><i>✦</i><span>STRATEGY</span><i>✦</i><span>GTM</span><i>✦</i><span>DEMAND</span><i>✦</i><span>GROWTH</span></div></section>
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>STRATEGY</span><i>✦</i><span>GTM</span><i>✦</i><span>DEMAND</span><i>✦</i><span>ABM</span><i>✦</i><span>GROWTH</span><i>✦</i><span>CAMPAIGNS</span><i>✦</i><span>MARKETING OPS</span><i>✦</i><span>AI</span><i>✦</i><span>COMMUNITY</span><i>✦</i><span>EVENTS</span><i>✦</i>
+    <span>STRATEGY</span><i>✦</i><span>GTM</span><i>✦</i><span>DEMAND</span><i>✦</i><span>ABM</span><i>✦</i><span>GROWTH</span><i>✦</i><span>CAMPAIGNS</span><i>✦</i><span>MARKETING OPS</span><i>✦</i><span>AI</span><i>✦</i><span>COMMUNITY</span><i>✦</i><span>EVENTS</span><i>✦</i>
+  </div>
+</div>
 
-<section class="proof section">
-  <div class="section-label">01 / PROOF</div>
+<!-- ========================= PROOF =========================
+     Verified numbers only. Do not add metrics you can't back up. -->
+<section class="proof section" id="proof" aria-labelledby="proof-title">
+  <p class="section-label">01 / PROOF</p>
+  <h2 class="visually-hidden" id="proof-title">Proof</h2>
   <div class="proof-grid">
-    <div><strong>7+</strong><span>years in<br>marketing</span></div>
-    <div><strong>₹2Cr<span>+</span></strong><span>portfolios<br>managed</span></div>
-    <div><strong>98<span>%</span></strong><span>client<br>retention</span></div>
-    <div class="proof-statement">Good marketing<br><em>gets remembered.</em></div>
+    <div class="stat"><strong><span data-count="7">7</span><sup>+</sup></strong><span>years of marketing<br>experience</span></div>
+    <div class="stat"><strong>₹<span data-count="2">2</span>Cr<sup>+</sup></strong><span>portfolio<br>ownership</span></div>
+    <div class="stat"><strong><span data-count="98">98</span><sup>%</sup></strong><span>client<br>retention</span></div>
+    <p class="proof-statement">Good marketing<br><em>gets remembered.</em></p>
   </div>
 </section>
 
-<section class="problems section">
-  <div class="section-label">02 / WHAT I SOLVE</div>
-  <div class="section-heading"><h2>What can I<br><span>help you solve?</span></h2><p>Start with the business problem. Work backwards from there.</p></div>
-  <div class="problem-grid">
-    <article class="problem-card green"><small>01</small><h3>We need a<br>GTM strategy.</h3><p>ICP · Positioning · Segmentation · Channels · Launch</p><b>→</b></article>
-    <article class="problem-card blue"><small>02</small><h3>We need more<br>B2B demand.</h3><p>ABM · Lead gen · Outbound · Campaigns · Content</p><b>→</b></article>
-    <article class="problem-card coral"><small>03</small><h3>We're launching<br>something new.</h3><p>GTM · Messaging · Acquisition · Measurement</p><b>→</b></article>
-    <article class="problem-card yellow"><small>04</small><h3>Our marketing<br>is scattered.</h3><p>Strategy · Systems · Automation · Reporting</p><b>→</b></article>
-    <article class="problem-card dark"><small>05</small><h3>We need someone<br>to own marketing.</h3><p>Fractional leadership · Strategy · Execution · Growth</p><b>→</b></article>
+<!-- ========================= PROBLEMS ========================= -->
+<section class="problems section" aria-labelledby="problems-title">
+  <p class="section-label">02 / WHAT I SOLVE</p>
+  <div class="section-heading">
+    <h2 id="problems-title">What can I<br><span>help you solve?</span></h2>
+    <p>Start with the business problem. Work backwards from there.</p>
   </div>
+  <ul class="problem-grid">
+    <li><a class="problem-card green" href="#contact"><small>01</small><h3>Need a GTM strategy?</h3><p>ICP · Positioning · Segmentation · Channels · Launch plan</p><b aria-hidden="true">→</b></a></li>
+    <li><a class="problem-card blue" href="#contact"><small>02</small><h3>Need better demand generation?</h3><p>ABM · Lead gen · Outbound · LinkedIn · Content</p><b aria-hidden="true">→</b></a></li>
+    <li><a class="problem-card coral" href="#contact"><small>03</small><h3>Need someone to own marketing end-to-end?</h3><p>Fractional or full-time · Strategy · Team · Execution</p><b aria-hidden="true">→</b></a></li>
+    <li><a class="problem-card yellow" href="#contact"><small>04</small><h3>Need to turn campaigns into pipeline?</h3><p>Campaign strategy · Nurture · Sales alignment · Reporting</p><b aria-hidden="true">→</b></a></li>
+    <li><a class="problem-card lavender" href="#contact"><small>05</small><h3>Need marketing ops &amp; automation?</h3><p>CRM · Workflows · Lead scoring · Dashboards · AI</p><b aria-hidden="true">→</b></a></li>
+    <li><a class="problem-card dark" href="#contact"><small>06</small><h3>Need to launch a new product?</h3><p>GTM · Messaging · Acquisition · Launch · Measurement</p><b aria-hidden="true">→</b></a></li>
+  </ul>
 </section>
 
-<section class="work section" id="work">
-  <div class="section-label">03 / SELECTED WORK</div>
-  <div class="section-heading"><h2>Things I've<br><span>built & shipped.</span></h2><p>A mix of strategy, campaigns, growth systems and experiences.</p></div>
+<!-- ========================= SELECTED WORK =========================
+     Each case uses <details> for the case notes (no extra pages needed).
+     Fill every [ADD YOUR INFORMATION] with real details. Only add outcomes
+     you can verify. To add an image, put it in assets/images/ and replace
+     the .case-visual block with e.g.:
+     <img class="case-img" src="assets/images/marxcel.jpg" alt="Describe the image" width="800" height="600" loading="lazy" decoding="async">
+-->
+<section class="work section" id="work" aria-labelledby="work-title">
+  <p class="section-label">03 / SELECTED WORK</p>
+  <div class="section-heading">
+    <h2 id="work-title">Things I've<br><span>built &amp; shipped.</span></h2>
+    <p>Strategy, campaigns, growth systems and experiences — across B2B, gaming, HealthTech and consumer brands.</p>
+  </div>
 
   <article class="case case-green">
-    <div class="case-number">01</div><div class="case-copy"><div class="case-tags">GTM · DEMAND GEN · OUTBOUND · AI</div><h3>Building a B2B<br>client acquisition engine.</h3><p>Systems to identify, qualify and engage potential B2B clients for a technology-focused marketing business.</p><a href="#contact">Read case study <span>↗</span></a></div>
-    <div class="case-visual funnel"><div>TARGET</div><i>↓</i><div>IDENTIFY</div><i>↓</i><div>QUALIFY</div><i>↓</i><div>ENGAGE</div></div>
+    <div class="case-number">01</div>
+    <div class="case-copy">
+      <p class="case-client">Marxcel</p>
+      <p class="case-tags">GTM · DEMAND GEN · OUTBOUND · AI</p>
+      <h3>Building a B2B client acquisition engine.</h3>
+      <p>Systems to identify, qualify and engage potential B2B clients for a technology-focused marketing business.</p>
+      <details class="case-notes">
+        <summary>Case notes <span aria-hidden="true">+</span></summary>
+        <dl>
+          <dt>Problem</dt><dd>Finding, qualifying and engaging the right B2B clients consistently.</dd>
+          <dt>Role</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Strategy</dt><dd>Target → identify → qualify → engage: a repeatable acquisition system rather than one-off outreach.</dd>
+          <dt>Execution</dt><dd>Outbound, demand generation and AI-assisted research workflows.</dd>
+          <dt>Deliverables</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Outcome</dt><dd class="todo">[ADD VERIFIED OUTCOME — or delete this line]</dd>
+        </dl>
+      </details>
+      <a class="case-link" href="#contact">Discuss a similar project <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="case-visual funnel" aria-hidden="true"><div>TARGET</div><i>↓</i><div>IDENTIFY</div><i>↓</i><div>QUALIFY</div><i>↓</i><div>ENGAGE</div></div>
   </article>
 
   <article class="case case-blue">
-    <div class="case-number">02</div><div class="case-copy"><div class="case-tags">ABM · COMMUNITY · B2B · CAMPAIGNS</div><h3>Turning community<br>into demand.</h3><p>Community-led demand generation, account-based marketing and technology ecosystem campaigns.</p><a href="#contact">Explore the work <span>↗</span></a></div>
-    <div class="case-visual community"><span>COMMUNITY</span><span>ABM</span><span>DEMAND</span><span>↗</span></div>
+    <div class="case-number">02</div>
+    <div class="case-copy">
+      <p class="case-client">Elevate Ecosystem</p>
+      <p class="case-tags">ABM · COMMUNITY · B2B · CAMPAIGNS</p>
+      <h3>Turning community into demand.</h3>
+      <p>Community-led demand generation, account-based marketing and technology ecosystem campaigns.</p>
+      <details class="case-notes">
+        <summary>Case notes <span aria-hidden="true">+</span></summary>
+        <dl>
+          <dt>Problem</dt><dd>Turning ecosystem and community engagement into real B2B demand.</dd>
+          <dt>Role</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Strategy</dt><dd>Community-led growth combined with account-based marketing.</dd>
+          <dt>Execution</dt><dd>Technology ecosystem campaigns and ABM programmes.</dd>
+          <dt>Deliverables</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Outcome</dt><dd class="todo">[ADD VERIFIED OUTCOME — or delete this line]</dd>
+        </dl>
+      </details>
+      <a class="case-link" href="#contact">Discuss a similar project <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="case-visual community" aria-hidden="true"><span>COMMUNITY</span><span>ABM</span><span>DEMAND</span><span>↗</span></div>
   </article>
 
   <article class="case case-yellow">
-    <div class="case-number">03</div><div class="case-copy"><div class="case-tags">GAMING · BRAND · CONTENT · COMMUNITY</div><h3>Building a game brand<br>from the ground up.</h3><p>Building the marketing and audience engine around an independent game studio and its upcoming title.</p><a href="#contact">Explore the work <span>↗</span></a></div>
-    <div class="case-visual game-visual"><div class="pixel">PLAY<br>BUILD<br>REPEAT</div><div class="controller">✦</div></div>
+    <div class="case-number">03</div>
+    <div class="case-copy">
+      <p class="case-client">Shroom Interactive</p>
+      <p class="case-tags">GAMING · BRAND · CONTENT · COMMUNITY</p>
+      <h3>Building a game brand from the ground up.</h3>
+      <p>Building the marketing and audience engine around an independent game studio and its upcoming title.</p>
+      <details class="case-notes">
+        <summary>Case notes <span aria-hidden="true">+</span></summary>
+        <dl>
+          <dt>Problem</dt><dd>Building brand and audience for an independent studio ahead of its title.</dd>
+          <dt>Role</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Strategy</dt><dd>Brand, content and community as one audience engine.</dd>
+          <dt>Execution</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Deliverables</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Outcome</dt><dd class="todo">[ADD VERIFIED OUTCOME — or delete this line]</dd>
+        </dl>
+      </details>
+      <a class="case-link" href="#contact">Discuss a similar project <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="case-visual game-visual" aria-hidden="true"><div class="pixel">PLAY<br>BUILD<br>REPEAT</div><div class="controller">✦</div></div>
   </article>
 
   <article class="case case-coral">
-    <div class="case-number">04</div><div class="case-copy"><div class="case-tags">HEALTHTECH · GTM · LAUNCH · GROWTH</div><h3>Taking a HealthTech<br>product to market.</h3><p>Developing a launch and growth strategy for a HealthTech product.</p><a href="#contact">Explore the work <span>↗</span></a></div>
-    <div class="case-visual launch"><div>IDEA</div><b>→</b><div>LAUNCH</div><b>→</b><div>GROW</div></div>
+    <div class="case-number">04</div>
+    <div class="case-copy">
+      <p class="case-client">Family Doc</p>
+      <p class="case-tags">HEALTHTECH · GTM · LAUNCH · GROWTH</p>
+      <h3>Taking a HealthTech product to market.</h3>
+      <p>Developing a launch and growth strategy for a HealthTech product.</p>
+      <details class="case-notes">
+        <summary>Case notes <span aria-hidden="true">+</span></summary>
+        <dl>
+          <dt>Problem</dt><dd>Taking a HealthTech product from idea to market.</dd>
+          <dt>Role</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Strategy</dt><dd>Launch and growth strategy: idea → launch → grow.</dd>
+          <dt>Execution</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Deliverables</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Outcome</dt><dd class="todo">[ADD VERIFIED OUTCOME — or delete this line]</dd>
+        </dl>
+      </details>
+      <a class="case-link" href="#contact">Discuss a similar project <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="case-visual launch" aria-hidden="true"><div>IDEA</div><b>→</b><div>LAUNCH</div><b>→</b><div>GROW</div></div>
   </article>
 
   <article class="case case-dark">
-    <div class="case-number">05</div><div class="case-copy"><div class="case-tags">EXPERIENTIAL · EVENTS · BRAND · ENGAGEMENT</div><h3>Turning an event<br>into an experience.</h3><p>Planning and executing an experiential brand and sales conference environment.</p><a href="#contact">Explore the work <span>↗</span></a></div>
-    <div class="case-visual event-visual"><div>BRAND</div><div>×</div><div>PEOPLE</div><div>=</div><div>EXPERIENCE</div></div>
+    <div class="case-number">05</div>
+    <div class="case-copy">
+      <p class="case-client">Royal Stag</p>
+      <p class="case-tags">EXPERIENTIAL · EVENTS · BRAND · ENGAGEMENT</p>
+      <h3>Turning an event into an experience.</h3>
+      <p>Planning and executing an experiential brand and sales conference environment.</p>
+      <details class="case-notes">
+        <summary>Case notes <span aria-hidden="true">+</span></summary>
+        <dl>
+          <dt>Problem</dt><dd>Making a brand and sales conference feel like an experience, not just an event.</dd>
+          <dt>Role</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Strategy</dt><dd>Brand × people = experience.</dd>
+          <dt>Execution</dt><dd>Planning and executing the experiential conference environment.</dd>
+          <dt>Deliverables</dt><dd class="todo">[ADD YOUR INFORMATION]</dd>
+          <dt>Outcome</dt><dd class="todo">[ADD VERIFIED OUTCOME — or delete this line]</dd>
+        </dl>
+      </details>
+      <a class="case-link" href="#contact">Discuss a similar project <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="case-visual event-visual" aria-hidden="true"><div>BRAND</div><div>×</div><div>PEOPLE</div><div>=</div><div>EXPERIENCE</div></div>
   </article>
 </section>
 
-<section class="toolkit section">
-  <div class="section-label">04 / THE TOOLKIT</div>
+<!-- ========================= TOOLKIT ========================= -->
+<section class="toolkit section" aria-labelledby="toolkit-title">
+  <p class="section-label">04 / THE TOOLKIT</p>
   <div class="toolkit-wrap">
-    <h2>The things I<br><span>like to play with.</span></h2>
-    <div class="tags">
-      <span>GTM</span><span>ABM</span><span>LinkedIn</span><span>Content</span><span>Campaigns</span><span>CRM</span><span>AI</span><span>Automation</span><span>Analytics</span><span>Community</span><span>Events</span><span>Research</span><span>Strategy</span>
+    <h2 id="toolkit-title">The things I<br><span>like to play with.</span></h2>
+    <ul class="tags">
+      <li>GTM</li><li>ABM</li><li>Demand gen</li><li>LinkedIn</li><li>Content</li><li>Campaigns</li><li>CRM</li><li>Marketing ops</li><li>Automation</li><li>AI-assisted marketing</li><li>Analytics</li><li>Community-led growth</li><li>Events</li><li>Research</li><li>Strategy</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========================= SERVICES ========================= -->
+<section class="services section" id="services" aria-labelledby="services-title">
+  <p class="section-label">05 / SERVICES</p>
+  <div class="section-heading">
+    <h2 id="services-title">Where I can<br><span>add value.</span></h2>
+    <p>Engage me for a defined project, an ongoing retainer, or to own marketing as part of your team.</p>
+  </div>
+  <ul class="service-list">
+    <li><a href="#contact"><b>01</b><h3>Marketing Strategy</h3><p>Audits · ICP · Positioning · Channel strategy · Roadmaps</p><span aria-hidden="true">↗</span></a></li>
+    <li><a href="#contact"><b>02</b><h3>GTM Strategy</h3><p>Product launches · Market entry · Segmentation · Messaging</p><span aria-hidden="true">↗</span></a></li>
+    <li><a href="#contact"><b>03</b><h3>Demand Generation</h3><p>Lead generation · Outbound · LinkedIn · Email · Content</p><span aria-hidden="true">↗</span></a></li>
+    <li><a href="#contact"><b>04</b><h3>B2B Marketing &amp; ABM</h3><p>Account-based programmes · Target accounts · Sales alignment</p><span aria-hidden="true">↗</span></a></li>
+    <li><a href="#contact"><b>05</b><h3>Growth Marketing</h3><p>Content · Social · Paid · Landing pages · Conversion</p><span aria-hidden="true">↗</span></a></li>
+    <li><a href="#contact"><b>06</b><h3>Campaigns &amp; Experiences</h3><p>B2B campaigns · Events · Activations · Community-led growth</p><span aria-hidden="true">↗</span></a></li>
+    <li><a href="#contact"><b>07</b><h3>Marketing Operations</h3><p>CRM · Automation · Lead scoring · Dashboards · Reporting</p><span aria-hidden="true">↗</span></a></li>
+    <li><a href="#contact"><b>08</b><h3>AI-assisted Marketing</h3><p>Research systems · Content workflows · AI-assisted operations</p><span aria-hidden="true">↗</span></a></li>
+  </ul>
+  <div class="built-for">
+    <h3>Built for</h3>
+    <ul>
+      <li>B2B &amp; technology companies</li>
+      <li>Startups &amp; founders</li>
+      <li>Product launches</li>
+      <li>Gaming &amp; HealthTech</li>
+      <li>Brands that need experiences</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========================= BELIEFS ========================= -->
+<section class="beliefs section" aria-labelledby="beliefs-title">
+  <div class="beliefs-inner">
+    <p class="section-label">06 / BELIEFS</p>
+    <h2 class="visually-hidden" id="beliefs-title">What I believe about marketing</h2>
+    <ol class="belief-list">
+      <li><span>01</span><h3>Attention is earned.</h3></li>
+      <li><span>02</span><h3>Strategy without execution is just a document.</h3></li>
+      <li><span>03</span><h3>More content isn't always the answer.</h3></li>
+      <li><span>04</span><h3>Good ideas need distribution.</h3></li>
+      <li><span>05</span><h3>Data tells you what happened. Context tells you why.</h3></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========================= ABOUT ========================= -->
+<section class="about section" id="about" aria-labelledby="about-title">
+  <p class="section-label">07 / ABOUT</p>
+  <div class="about-grid">
+    <div>
+      <h2 id="about-title">Somewhere between<br><span>strategy &amp; execution.</span></h2>
+      <ul class="pillars" aria-label="What I bring">
+        <li class="p-green">Strategy</li><li class="p-blue">Execution</li><li class="p-lavender">Technology</li><li class="p-yellow">Growth thinking</li><li class="p-coral">Creative problem solving</li>
+      </ul>
+    </div>
+    <div class="about-copy">
+      <p class="big">I like figuring out why something isn't working, finding the opportunity, building the strategy — and then actually getting the work out into the world.</p>
+      <p>I work across B2B, technology, startups, gaming, HealthTech, events, growth and marketing operations. That means I can move from the business problem to the campaign, system or experience that solves it — and run it without needing to be managed.</p>
+      <div class="audience">
+        <div>
+          <h3>If you're a client</h3>
+          <p>Bring the problem. I'll shape the strategy, build the plan and deliver the work — GTM, demand, campaigns or systems.</p>
+        </div>
+        <div>
+          <h3>If you're hiring</h3>
+          <p>I can own marketing end-to-end: set the direction, run the channels, work with sales and product, and report on what's working.</p>
+        </div>
+      </div>
+      <a class="text-link" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
 
-<section class="services section" id="services">
-  <div class="section-label">05 / SERVICES</div>
-  <div class="section-heading"><h2>Where I can<br><span>add value.</span></h2></div>
-  <div class="service-list">
-    <div><b>01</b><h3>Marketing Strategy</h3><p>Audits · ICP · Positioning · Channel strategy · Roadmaps</p><span>↗</span></div>
-    <div><b>02</b><h3>GTM Strategy</h3><p>Product launches · Market entry · Segmentation · Messaging</p><span>↗</span></div>
-    <div><b>03</b><h3>Demand Generation</h3><p>ABM · Lead generation · Outbound · LinkedIn · Email</p><span>↗</span></div>
-    <div><b>04</b><h3>Growth Marketing</h3><p>Content · Social · Paid · Landing pages · Conversion</p><span>↗</span></div>
-    <div><b>05</b><h3>Campaigns & Experiences</h3><p>B2B campaigns · Events · Activations · Community</p><span>↗</span></div>
-    <div><b>06</b><h3>Marketing Systems</h3><p>CRM · Automation · Lead scoring · Dashboards · AI</p><span>↗</span></div>
+<!-- ========================= PROCESS ========================= -->
+<section class="process section" aria-labelledby="process-title">
+  <div class="process-inner">
+    <p class="section-label">08 / PROCESS</p>
+    <h2 id="process-title">How an idea becomes<br><span>a campaign.</span></h2>
+    <ol class="process-track">
+      <li><small>01</small><strong>FIND<br>THE PROBLEM</strong></li>
+      <li><small>02</small><strong>FIND WHO<br>CARES</strong></li>
+      <li><small>03</small><strong>BUILD<br>THE STORY</strong></li>
+      <li><small>04</small><strong>LAUNCH<br>IT</strong></li>
+      <li><small>05</small><strong>MEASURE<br>IT</strong></li>
+      <li><small>06</small><strong>MAKE IT<br>BETTER</strong></li>
+    </ol>
   </div>
 </section>
 
-<section class="beliefs section">
-  <div class="section-label">06 / BELIEFS</div>
-  <div class="belief-list">
-    <div><span>01</span><h3>Attention is earned.</h3></div>
-    <div><span>02</span><h3>Strategy without execution is just a document.</h3></div>
-    <div><span>03</span><h3>More content isn't always the answer.</h3></div>
-    <div><span>04</span><h3>Good ideas need distribution.</h3></div>
-    <div><span>05</span><h3>Data tells you what happened. Context tells you why.</h3></div>
+<!-- ========================= EXPERIENCE =========================
+     Add real roles in the .roles list below. Don't invent titles or companies. -->
+<section class="experience section" id="experience" aria-labelledby="experience-title">
+  <p class="section-label">09 / EXPERIENCE</p>
+  <div class="section-heading">
+    <h2 id="experience-title">Built across<br><span>different worlds.</span></h2>
+    <p>Strategy, client management, campaigns and growth — with experience moving between the plan and the work.</p>
   </div>
-</section>
-
-<section class="about section" id="about">
-  <div class="section-label">07 / ABOUT</div>
-  <div class="about-grid">
-    <div><h2>Somewhere between<br><span>strategy & execution.</span></h2></div>
-    <div class="about-copy"><p class="big">I like figuring out why something isn't working, finding the opportunity, building the strategy — and then actually getting the work out into the world.</p><p>I work across B2B, technology, startups, gaming, HealthTech, events, growth and marketing operations. That means I can move from the business problem to the campaign, system or experience that solves it.</p><a class="text-link" href="#contact">Let's talk <span>↗</span></a></div>
-  </div>
-</section>
-
-<section class="process section">
-  <div class="section-label">08 / PROCESS</div>
-  <h2>How an idea becomes<br><span>a campaign.</span></h2>
-  <div class="process-track">
-    <div><small>01</small><strong>FIND<br>THE PROBLEM</strong></div><i>→</i>
-    <div><small>02</small><strong>FIND WHO<br>CARES</strong></div><i>→</i>
-    <div><small>03</small><strong>BUILD<br>THE STORY</strong></div><i>→</i>
-    <div><small>04</small><strong>LAUNCH<br>IT</strong></div><i>→</i>
-    <div><small>05</small><strong>MEASURE<br>IT</strong></div><i>→</i>
-    <div><small>06</small><strong>MAKE IT<br>BETTER</strong></div>
-  </div>
-</section>
-
-<section class="experience section">
-  <div class="section-label">09 / EXPERIENCE</div>
-  <div class="experience-head"><h2>Built across<br><span>different worlds.</span></h2><p>Strategy, client management, campaigns and growth — with experience moving between the plan and the work.</p></div>
   <div class="timeline">
     <div><span>MARKETING</span><h3>7+ years</h3><p>Strategy, growth, demand generation and client work.</p></div>
-    <div><span>B2B</span><h3>Demand + ABM</h3><p>Technology ecosystem marketing, communities and account-based programs.</p></div>
+    <div><span>B2B</span><h3>Demand + ABM</h3><p>Technology ecosystem marketing, communities and account-based programmes.</p></div>
     <div><span>EXPERIENTIAL</span><h3>Campaigns + Events</h3><p>Brand experiences, engagement and production-led marketing.</p></div>
     <div><span>AI / SYSTEMS</span><h3>Automation</h3><p>Marketing workflows, research systems and AI-assisted operations.</p></div>
   </div>
+  <ol class="roles" aria-label="Roles">
+    <li><span class="todo">[ADD YEARS]</span><strong class="todo">[ADD ROLE]</strong><em class="todo">[ADD COMPANY]</em></li>
+    <li><span class="todo">[ADD YEARS]</span><strong class="todo">[ADD ROLE]</strong><em class="todo">[ADD COMPANY]</em></li>
+    <li><span class="todo">[ADD YEARS]</span><strong class="todo">[ADD ROLE]</strong><em class="todo">[ADD COMPANY]</em></li>
+  </ol>
 </section>
 
-<section class="cta section" id="contact">
+<!-- ========================= CTA =========================
+     CONTACT DETAILS: replace ADD-YOUR-EMAIL (3 places) and ADD-YOUR-LINKEDIN (2 places)
+     here AND in the footer below. -->
+<section class="cta section" id="contact" aria-labelledby="contact-title">
   <div class="cta-inner">
-    <div class="eyebrow dark-eyebrow"><span class="pulse"></span> LET'S MAKE SOMETHING PEOPLE NOTICE.</div>
-    <h2>Have a product to launch?<br>A pipeline to build?<br><em>A marketing system to fix?</em></h2>
-    <a class="cta-button" href="mailto:YOUR_EMAIL@example.com">Let's talk <span>↗</span></a>
-    <p class="placeholder">Replace YOUR_EMAIL@example.com with your email before publishing.</p>
+    <p class="eyebrow dark-eyebrow"><span class="pulse" aria-hidden="true"></span> LET'S MAKE SOMETHING PEOPLE NOTICE.</p>
+    <h2 id="contact-title">Need a marketing brain <em>on the problem?</em></h2>
+    <p class="cta-sub">A product to launch, a pipeline to build, a marketing system to fix — or a marketing role to fill. Tell me what's going on.</p>
+    <div class="cta-actions">
+      <a class="cta-button" href="mailto:ADD-YOUR-EMAIL?subject=Let's%20talk%20marketing">Let's talk <span aria-hidden="true">↗</span></a>
+      <a class="cta-secondary" href="https://www.linkedin.com/in/ADD-YOUR-LINKEDIN" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+    </div>
+    <p class="cta-email">or email <a href="mailto:ADD-YOUR-EMAIL">[ADD YOUR EMAIL]</a></p>
   </div>
 </section>
 </main>
 
-<footer><div><strong>SOWMYA®</strong><span>Marketing, GTM & Growth</span></div><div class="footer-links"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div><div>© 2026</div></footer>
-<script src="script.js"></script>
+<footer class="footer">
+  <div class="footer-top">
+    <a class="footer-mark" href="#main">SOWMYA<span>®</span></a>
+    <a class="back-top" href="#main">Back to top <span aria-hidden="true">↑</span></a>
+  </div>
+  <div class="footer-bottom">
+    <p><strong>Sowmya</strong> — Marketing, GTM &amp; Growth</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#experience">Experience</a>
+      <a href="mailto:ADD-YOUR-EMAIL">Email</a><a href="https://www.linkedin.com/in/ADD-YOUR-LINKEDIN" rel="noopener">LinkedIn</a>
+    </nav>
+    <p>© <span class="year">2026</span></p>
+  </div>
+</footer>
+<script src="script.js" defer></script>
 </body>
 </html>
