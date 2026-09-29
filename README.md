@@ -65,9 +65,9 @@ Search the project for these markers. Every one needs your real information:
 | Marker | File | What it is |
 | --- | --- | --- |
 | `[ADD FORM ENDPOINT]` | `index.html` (contact form `action`) | Your Formspree endpoint. See **Contact form** below |
-| `[ADD VERIFIED DETAILS]` | `index.html` | Problem, role, strategy, execution and deliverables in each case study's "Case notes" |
-| `[ADD VERIFIED OUTCOME …]` | `index.html` | Case-study outcomes. Add only results you can verify, otherwise delete the line |
-| `[ADD YEARS]` `[ADD ROLE]` `[ADD COMPANY]` | `index.html` | Your roles in the Experience section |
+| `[ADD VERIFIED PROOF …]` | `index.html` | "The proof" for Shroom Interactive, Family Doc and Royal Stag: verified artifacts, links or scale only. Otherwise delete that heading and line |
+| `[ADD DATES]` | `index.html` | Dates for each role in the Experience section |
+| `[ADD COMPANY / AGENCY, IF APPLICABLE]` | `index.html` | Who you delivered the Royal Stag work through (delete if not applicable) |
 | `sowmya06-tech.github.io/portfolio` | `index.html`, `robots.txt`, `sitemap.xml` | Site URL. Change it only if you move to a custom domain |
 
 ### Contact form
@@ -114,4 +114,4 @@ At the top of `style.css`:
 
 ## Content rule
 
-This site never invents clients, testimonials, revenue, leads, conversion rates, results, awards, partnerships, job titles or company details. Where something is missing, it shows a highlighted placeholder such as `[ADD VERIFIED DETAILS]`.
+This site never invents clients, testimonials, revenue, leads, conversion rates, results, awards, partnerships, job titles or company details. Where something is missing, it shows a highlighted placeholder such as `[ADD VERIFIED PROOF …]` or `[ADD DATES]`.

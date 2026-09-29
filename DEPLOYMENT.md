@@ -11,7 +11,7 @@ Wherever you see `YOUR-USERNAME`, use your GitHub username. Wherever you see `yo
 Open `index.html` in any text editor (Notepad, TextEdit, or directly on GitHub with the ✏️ pencil icon) and replace:
 
 - `[ADD FORM ENDPOINT]` → your Formspree endpoint (steps in `README.md` → **Contact form**)
-- Every `[ADD VERIFIED DETAILS]`, `[ADD VERIFIED OUTCOME …]`, `[ADD ROLE]`, `[ADD COMPANY]` and `[ADD YEARS]`
+- Every `[ADD VERIFIED PROOF …]`, `[ADD DATES]` and `[ADD COMPANY / AGENCY, IF APPLICABLE]`
 
 Tip: use **Find** (Ctrl+F / Cmd+F) and search for `ADD`.
 
