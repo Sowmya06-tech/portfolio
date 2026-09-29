@@ -54,7 +54,7 @@
   /* ---------- Reveal on scroll ---------- */
   if (!reduceMotion && 'IntersectionObserver' in window) {
     root.classList.add('js-reveal');
-    const targets = document.querySelectorAll('.stat, .proof-statement, .problem-grid li, .case, .tags, .service-list li, .belief-list li, .about-grid > div, .process-track li, .story li, .roles li, .cta-inner');
+    const targets = document.querySelectorAll('.stat, .proof-statement, .problem-grid li, .case, .panel, .tags, .service-list li, .belief-list li, .about-grid > div, .process-track li, .story li, .roles li, .cta-inner');
     const io = new IntersectionObserver(entries => entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const el = entry.target;

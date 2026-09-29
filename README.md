@@ -65,7 +65,7 @@ Search the project for these markers. Every one needs your real information:
 | Marker | File | What it is |
 | --- | --- | --- |
 | `[ADD FORM ENDPOINT]` | `index.html` (contact form `action`) | Your Formspree endpoint. See **Contact form** below |
-| `[ADD VERIFIED PROOF …]` | `index.html` | "The proof" for Shroom Interactive, Family Doc and Royal Stag: verified artifacts, links or scale only. Otherwise delete that heading and line |
+| Artifact slots (`ADD GTM FRAMEWORK`, `ADD DASHBOARD`, …) | `index.html` | Dashed "Artifact slot" / "Work sample" boxes in **Things I've Built** and in each case study. See **Artifact slots** below |
 | `[ADD DATES]` | `index.html` | Dates for each role in the Experience section |
 | `[ADD COMPANY / AGENCY, IF APPLICABLE]` | `index.html` | Who you delivered the Royal Stag work through (delete if not applicable) |
 | `sowmya06-tech.github.io/portfolio` | `index.html`, `robots.txt`, `sitemap.xml` | Site URL. Change it only if you move to a custom domain |
@@ -86,6 +86,30 @@ Email and LinkedIn are set in the Contact section and footer of `index.html`: se
 All text is in `index.html`, section by section (Hero → Proof → What I solve → Selected work → Toolkit → Services → Beliefs → About → Process → Experience → Contact). Each section is marked with a comment like `<!-- ===== HERO ===== -->`.
 
 **Proof numbers:** only use verified figures. The current ones (7+ years, ₹2Cr+ portfolio ownership, 98% client retention) are the approved proof points.
+
+### Artifact slots (Things I've Built + case studies)
+The dashed, taped boxes are placeholders for real work. They're designed to look intentional until you replace them:
+
+| Where | Slot |
+| --- | --- |
+| Things I've Built → 01 Strategy | ADD GTM FRAMEWORK |
+| Things I've Built → 02 Growth | ADD CAMPAIGN ARTIFACT |
+| Things I've Built → 03 Creative | ADD BRAND WORK · ADD CAMPAIGN CREATIVE · ADD SOCIAL / CONTENT |
+| Things I've Built → 04 Digital | ADD WEBSITE WORK |
+| Things I've Built → 05 Systems | ADD DASHBOARD |
+| Marxcel case | ADD GTM FRAMEWORK |
+| Elevate Ecosystem case | ADD PROGRAMME CREATIVE |
+| Shroom Interactive case | ADD BRAND WORK |
+| Family Doc case | ADD CAMPAIGN CREATIVE |
+| Royal Stag case | ADD EVENT PHOTOS |
+
+To fill one, save the image in `assets/images/`, then replace that slot's `<div class="slot …">…</div>` with:
+
+```html
+<figure class="artifact"><img src="assets/images/your-file.jpg" alt="What it shows" width="1200" height="800" loading="lazy" decoding="async"><figcaption>What it is</figcaption></figure>
+```
+
+Only use real work you're allowed to show. The diagrams in Things I've Built (target, bars, wireframe, workflow) are labelled "illustrative" and aren't client artifacts.
 
 ### Case-study images
 1. Save the image in `assets/images/`, e.g. `assets/images/marxcel.jpg`. Keep it under about 300 KB; export as `.webp` or `.jpg` around 1200px wide.
