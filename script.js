@@ -54,7 +54,7 @@
   /* ---------- Reveal on scroll ---------- */
   if (!reduceMotion && 'IntersectionObserver' in window) {
     root.classList.add('js-reveal');
-    const targets = document.querySelectorAll('.stat, .proof-statement, .problem-grid li, .case, .panel, .tags, .service-list li, .belief-list li, .about-grid > div, .process-track li, .story li, .roles li, .cta-inner');
+    const targets = document.querySelectorAll('.stat, .proof-statement, .problem-grid li, .case, .panel, .tags, .service-list li, .belief-list li, .about-grid > div, .process-track li, .story li, .logo-wall, .co, .cta-inner');
     const io = new IntersectionObserver(entries => entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const el = entry.target;
@@ -134,7 +134,7 @@
     const statusEl = form.querySelector('.form-status');
     const submitBtn = form.querySelector('.form-submit');
     const topicSet = form.querySelector('.topics');
-    const EMAIL = 'sowmyadevang@gmail.com';
+    const EMAIL = 'sowmyadevangk@gmail.com';
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
     const setError = (el, errEl, msg) => {

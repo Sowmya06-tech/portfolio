@@ -74,18 +74,29 @@ Search the project for these markers. Every one needs your real information:
 The form in the Contact section uses **[Formspree](https://formspree.io)** (free plan, no server needed). Until it's connected, pressing **Let's talk** opens the visitor's email app with their message pre-filled, so no enquiries are lost.
 
 To connect it:
-1. Sign up free at <https://formspree.io> with `sowmyadevang@gmail.com` and confirm your email.
-2. Click **+ New Form**, name it "Portfolio", and choose `sowmyadevang@gmail.com` as the recipient.
+1. Sign up free at <https://formspree.io> with `sowmyadevangk@gmail.com` and confirm your email.
+2. Click **+ New Form**, name it "Portfolio", and choose `sowmyadevangk@gmail.com` as the recipient.
 3. Copy the form's endpoint. It looks like `https://formspree.io/f/abcdwxyz`.
 4. In `index.html`, find `action="[ADD FORM ENDPOINT]"` and replace **only** `[ADD FORM ENDPOINT]` with your endpoint, e.g. `action="https://formspree.io/f/abcdwxyz"`. Commit.
 5. Test it on the live site: send yourself a message, check you see "Message received. I'll get back to you soon." and that the email arrives. (Formspree may ask you to confirm the very first submission.)
 
-Email and LinkedIn are set in the Contact section and footer of `index.html`: search for `sowmyadevang@gmail.com` and `sowmya-devang`.
+Email and LinkedIn are set in the Contact section and footer of `index.html`: search for `sowmyadevangk@gmail.com` and `sowmya-devang`.
 
 ### Personal info & copy
 All text is in `index.html`, section by section (Hero → Proof → What I solve → Selected work → Toolkit → Services → Beliefs → About → Process → Experience → Contact). Each section is marked with a comment like `<!-- ===== HERO ===== -->`.
 
 **Proof numbers:** only use verified figures. The current ones (7+ years, ₹2Cr+ portfolio ownership, 98% client retention) are the approved proof points.
+
+### Brands & organisations logo wall
+Logos live in `assets/logos/` as SVG files. They're official brand artwork, taken unaltered from open-source brand-logo collections (gilbarbara/logos, VectorLogoZone, svgl, theSVG) and only cropped to their edges.
+
+These names are currently shown as type because no official logo file was available when the wall was built: **DevRev, Redington, Centilytics, CyberArk, Barracuda, Coralogix, Affinidi, Games24x7**. To add one:
+1. Download the official SVG from the company's brand or press page and save it as, e.g., `assets/logos/devrev.svg`.
+2. In `index.html`, replace that tile's `<li class="lw-text">…</li>` with the same pattern as the logo tiles:
+   `<li><span class="lw-no" aria-hidden="true">08</span><img src="assets/logos/devrev.svg" alt="DevRev" width="120" height="26" loading="lazy" decoding="async"><span class="lw-name" aria-hidden="true">DevRev</span></li>`
+   Set `width`/`height` to the logo's proportions at about 26px tall (use up to 40px for square marks).
+
+The line under the wall ("Logos shown for identification purposes…") should stay.
 
 ### Artifact slots (Things I've Built + case studies)
 The dashed, taped boxes are placeholders for real work. They're designed to look intentional until you replace them:
