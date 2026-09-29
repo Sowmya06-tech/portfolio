@@ -13,7 +13,7 @@ Open `index.html` in any text editor (Notepad, TextEdit, or directly on GitHub w
 - `ADD-YOUR-EMAIL` → your email (3 places)
 - `ADD-YOUR-LINKEDIN` → the end of your LinkedIn URL, e.g. `sowmya-xyz` (2 places)
 - `[ADD YOUR EMAIL]` → your email as visible text
-- Every `[ADD YOUR INFORMATION]`, `[ADD ROLE]`, `[ADD COMPANY]` and `[ADD YEARS]`
+- Every `[ADD VERIFIED DETAILS]`, `[ADD VERIFIED OUTCOME …]`, `[ADD ROLE]`, `[ADD COMPANY]` and `[ADD YEARS]`
 - `YOURDOMAIN.com` → your domain (also in `CNAME`, `robots.txt` and `sitemap.xml`)
 
 Tip: use **Find** (Ctrl+F / Cmd+F) and search for `ADD` and `YOURDOMAIN`.

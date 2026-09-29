@@ -66,7 +66,7 @@ Search the project for these markers. Every one needs your real information:
 | `ADD-YOUR-EMAIL` | `index.html` (3×) | Your email address (in the contact section and footer) |
 | `ADD-YOUR-LINKEDIN` | `index.html` (2×) | Your LinkedIn profile URL |
 | `[ADD YOUR EMAIL]` | `index.html` | Visible email text in the contact section |
-| `[ADD YOUR INFORMATION]` | `index.html` | Role, execution and deliverables in each case study's "Case notes" |
+| `[ADD VERIFIED DETAILS]` | `index.html` | Problem, role, strategy, execution and deliverables in each case study's "Case notes" |
 | `[ADD VERIFIED OUTCOME …]` | `index.html` | Case-study outcomes. Add only results you can verify, otherwise delete the line |
 | `[ADD YEARS]` `[ADD ROLE]` `[ADD COMPANY]` | `index.html` | Your roles in the Experience section |
 | `YOURDOMAIN.com` | `index.html`, `CNAME`, `robots.txt`, `sitemap.xml` | Your real domain |
@@ -103,4 +103,4 @@ At the top of `style.css`:
 
 ## Content rule
 
-This site never invents clients, testimonials, revenue, leads, conversion rates, results, awards, partnerships, job titles or company details. Where something is missing, it shows a highlighted `[ADD YOUR INFORMATION]` placeholder.
+This site never invents clients, testimonials, revenue, leads, conversion rates, results, awards, partnerships, job titles or company details. Where something is missing, it shows a highlighted placeholder such as `[ADD VERIFIED DETAILS]`.
