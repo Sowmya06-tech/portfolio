@@ -115,7 +115,7 @@ The dashed, taped boxes are placeholders for real work. They're designed to look
 | 05 Events & experiential | ADD EVENT PHOTOS · ADD EVENT CREATIVE · ADD EVENT ARTIFACT · ADD CAMPAIGN VISUAL |
 | Royal Stag (inside Events & experiential → "Read the Royal Stag case study") | ADD EVENT PHOTOS |
 
-**Events & experiential:** the grey "About the programme" boxes are public context about each AWS / Databricks / Amazon programme, not claims about your work. The "My work" / "My focus" lines are your experience. Replace the two `[ADD SPECIFIC ROLE DETAILS]` placeholders (AWS AI & Cloud, Databricks) when you're ready.
+**Events & experiential:** the grey "About the programme" boxes are public context about each AWS / Databricks / Amazon programme, not claims about your work. The "My work" / "My focus" lines are your experience.
 
 To fill one, save the image in `assets/images/`, then replace that slot's `<div class="slot …">…</div>` with:
 
