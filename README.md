@@ -23,7 +23,6 @@ Built to be hosted free on **GitHub Pages** with a **custom domain**.
 │   ├── images/         ← og-image.png (link preview) + your case-study images
 │   ├── icons/          ← favicon.svg, favicon-32.png, apple-touch-icon.png
 │   └── fonts/          ← self-hosted .woff2 font files
-├── CNAME               ← your custom domain (placeholder: YOURDOMAIN.com)
 ├── .nojekyll           ← tells GitHub Pages to serve files as-is
 ├── robots.txt
 ├── sitemap.xml
@@ -51,11 +50,13 @@ Short version: push these files to the `main` branch → **Settings → Pages** 
 
 ## Custom domain
 
-1. Put your domain (e.g. `sowmya.com`, no `https://`) as the only line in `CNAME`.
+**Currently live without a custom domain at <https://sowmya06-tech.github.io/portfolio/>** (no `CNAME` file). When you buy a domain:
+
+1. Enter it in **Settings → Pages → Custom domain**. GitHub creates the `CNAME` file for you.
 2. Add the DNS records listed in [DEPLOYMENT.md](DEPLOYMENT.md#5-configure-dns-at-your-domain-registrar) at your registrar.
 3. **Settings → Pages → Custom domain**, then tick **Enforce HTTPS**.
 
-> ⚠️ While `CNAME` still says `YOURDOMAIN.com`, GitHub Pages will try to use that fake domain. Replace it, or delete the file if you want to test on the free `github.io` address first.
+> Then replace `https://sowmya06-tech.github.io/portfolio/` with your domain in `index.html`, `robots.txt` and `sitemap.xml`, and change `/portfolio/` to `/` in `404.html`.
 
 ## Where to update things
 
@@ -69,7 +70,7 @@ Search the project for these markers. Every one needs your real information:
 | `[ADD VERIFIED DETAILS]` | `index.html` | Problem, role, strategy, execution and deliverables in each case study's "Case notes" |
 | `[ADD VERIFIED OUTCOME …]` | `index.html` | Case-study outcomes. Add only results you can verify, otherwise delete the line |
 | `[ADD YEARS]` `[ADD ROLE]` `[ADD COMPANY]` | `index.html` | Your roles in the Experience section |
-| `YOURDOMAIN.com` | `index.html`, `CNAME`, `robots.txt`, `sitemap.xml` | Your real domain |
+| `sowmya06-tech.github.io/portfolio` | `index.html`, `robots.txt`, `sitemap.xml` | Site URL. Change it only if you move to a custom domain |
 
 ### Personal info & copy
 All text is in `index.html`, section by section (Hero → Proof → What I solve → Selected work → Toolkit → Services → Beliefs → About → Process → Experience → Contact). Each section is marked with a comment like `<!-- ===== HERO ===== -->`.
@@ -88,10 +89,10 @@ All text is in `index.html`, section by section (Hero → Proof → What I solve
 At the top of `index.html` (the `<head>` section):
 - `<title>` and `<meta name="description">`: the search result title and snippet
 - `og:*` and `twitter:*` tags: how links look when shared on LinkedIn, WhatsApp and X
-- `<link rel="canonical">`: replace `YOURDOMAIN.com`
+- `<link rel="canonical">`: the site's official URL
 - The share image is `assets/images/og-image.png` (1200×630). Replace it with your own if you like, using the same name and size.
 
-Also update `YOURDOMAIN.com` in `robots.txt` and `sitemap.xml`, and change `<lastmod>` in `sitemap.xml` when you make big changes.
+If the URL changes, also update it in `robots.txt` and `sitemap.xml`. Change `<lastmod>` in `sitemap.xml` when you make big changes.
 
 ### Colours
 At the top of `style.css`:

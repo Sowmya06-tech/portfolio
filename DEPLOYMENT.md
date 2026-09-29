@@ -14,9 +14,8 @@ Open `index.html` in any text editor (Notepad, TextEdit, or directly on GitHub w
 - `ADD-YOUR-LINKEDIN` → the end of your LinkedIn URL, e.g. `sowmya-xyz` (2 places)
 - `[ADD YOUR EMAIL]` → your email as visible text
 - Every `[ADD VERIFIED DETAILS]`, `[ADD VERIFIED OUTCOME …]`, `[ADD ROLE]`, `[ADD COMPANY]` and `[ADD YEARS]`
-- `YOURDOMAIN.com` → your domain (also in `CNAME`, `robots.txt` and `sitemap.xml`)
 
-Tip: use **Find** (Ctrl+F / Cmd+F) and search for `ADD` and `YOURDOMAIN`.
+Tip: use **Find** (Ctrl+F / Cmd+F) and search for `ADD`.
 
 ---
 
@@ -35,7 +34,7 @@ Tip: use **Find** (Ctrl+F / Cmd+F) and search for `ADD` and `YOURDOMAIN`.
 **Easiest way (no software):**
 
 1. In your new repository, click **uploading an existing file** (or **Add file → Upload files**).
-2. Open the website folder on your computer, select **everything inside it** (`index.html`, `style.css`, `script.js`, `404.html`, `CNAME`, `robots.txt`, `sitemap.xml`, `.nojekyll` and the whole `assets` folder) and drag it into the browser window.
+2. Open the website folder on your computer, select **everything inside it** (`index.html`, `style.css`, `script.js`, `404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll` and the whole `assets` folder) and drag it into the browser window.
    - Drag the *contents* of the folder, not the folder itself. `index.html` must sit at the top level of the repository.
    - `.nojekyll` is a hidden file. On Mac press **Cmd+Shift+.** in Finder to show it; on Windows tick **View → Hidden items**. If it won't upload, don't worry: create it on GitHub with **Add file → Create new file**, name it `.nojekyll`, leave it empty and commit.
 3. At the bottom, click **Commit changes**.
@@ -55,9 +54,8 @@ git push origin main
 3. Under **Branch**, choose **`main`** and **`/ (root)`**, then click **Save**.
 4. Wait 1–2 minutes and refresh the page. You'll see *"Your site is live at …"*.
 
-> ⚠️ **Important about the `CNAME` file.** If `CNAME` still contains the placeholder `YOURDOMAIN.com`, GitHub will try to send visitors to that fake domain.
-> - **Have your domain already?** Put it in `CNAME` first (e.g. `sowmya.com`) and go to step 4.
-> - **Want to test first?** Delete the `CNAME` file (open it on GitHub → ⋯ → **Delete file**). Your site will then work at `https://YOUR-USERNAME.github.io/portfolio/`. Add the domain later in step 4, and GitHub will recreate the file for you.
+> **Current setup:** no custom domain, so there is no `CNAME` file. The site lives at `https://sowmya06-tech.github.io/portfolio/`. Steps 4–6 are only for later, once you buy a domain. GitHub creates the `CNAME` file for you in step 4.
+> When you switch, also replace `https://sowmya06-tech.github.io/portfolio/` with your domain in `index.html`, `robots.txt` and `sitemap.xml`, and change `/portfolio/` to `/` in `404.html`.
 
 ## 4. Connect your custom domain
 
@@ -129,6 +127,6 @@ Edit a file on GitHub (open it → ✏️ pencil → change → **Commit changes
 | --- | --- |
 | 404 "There isn't a GitHub Pages site here" | Check that `index.html` is at the top level of the repo (not inside a folder) and that Pages is set to `main` / `(root)`. |
 | Site shows but has no styling | Make sure `style.css`, `script.js` and the `assets` folder were uploaded next to `index.html`. |
-| github.io address redirects to `YOURDOMAIN.com` | The `CNAME` file still has the placeholder. Replace it with your real domain, or delete it. |
+| github.io address redirects to a domain you don't own | A `CNAME` file exists with the wrong domain. Delete it, or fix it in Settings → Pages → Custom domain. |
 | "Domain's DNS record could not be retrieved" | DNS hasn't spread yet. Wait, and double-check the records in step 5. |
 | Enforce HTTPS is greyed out | The certificate is still being issued. See step 6. |

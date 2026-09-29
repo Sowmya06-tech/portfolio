@@ -1,5 +1,5 @@
-# Replace YOURDOMAIN.com with your real domain.
+# Update this URL if you move to a custom domain.
 User-agent: *
 Allow: /
 
-Sitemap: https://YOURDOMAIN.com/sitemap.xml
+Sitemap: https://sowmya06-tech.github.io/portfolio/sitemap.xml
