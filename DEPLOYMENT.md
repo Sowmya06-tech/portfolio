@@ -10,9 +10,7 @@ Wherever you see `YOUR-USERNAME`, use your GitHub username. Wherever you see `yo
 
 Open `index.html` in any text editor (Notepad, TextEdit, or directly on GitHub with the ✏️ pencil icon) and replace:
 
-- `ADD-YOUR-EMAIL` → your email (3 places)
-- `ADD-YOUR-LINKEDIN` → the end of your LinkedIn URL, e.g. `sowmya-xyz` (2 places)
-- `[ADD YOUR EMAIL]` → your email as visible text
+- `[ADD FORM ENDPOINT]` → your Formspree endpoint (steps in `README.md` → **Contact form**)
 - Every `[ADD VERIFIED DETAILS]`, `[ADD VERIFIED OUTCOME …]`, `[ADD ROLE]`, `[ADD COMPANY]` and `[ADD YEARS]`
 
 Tip: use **Find** (Ctrl+F / Cmd+F) and search for `ADD`.

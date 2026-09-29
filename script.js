@@ -124,6 +124,107 @@
     }
   }
 
+  /* ---------- Contact form ----------
+     Sends to the Formspree endpoint in the form's action="" attribute.
+     Until that placeholder is replaced, it falls back to opening the
+     visitor's email app with the message pre-filled. */
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.noValidate = true; // we show our own messages; native validation still applies without JS
+    const statusEl = form.querySelector('.form-status');
+    const submitBtn = form.querySelector('.form-submit');
+    const topicSet = form.querySelector('.topics');
+    const EMAIL = 'sowmyadevang@gmail.com';
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    const setError = (el, errEl, msg) => {
+      if (errEl) errEl.textContent = msg || '';
+      if (el) el.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    };
+    const checks = {
+      name: () => form.elements['name'].value.trim() ? '' : 'Please add your name.',
+      email: () => {
+        const v = form.elements['email'].value.trim();
+        if (!v) return 'Please add your email so I can reply.';
+        return emailRe.test(v) ? '' : 'That email doesn’t look right — e.g. name@company.com';
+      },
+      area: () => form.querySelector('input[name="area"]:checked') ? '' : 'Pick the area that fits best.',
+      message: () => {
+        const v = form.elements['message'].value.trim();
+        if (!v) return 'Tell me a little about what you need.';
+        return v.length < 10 ? 'A little more detail, please (at least 10 characters).' : '';
+      }
+    };
+    const fields = {
+      name: [form.elements['name'], document.getElementById('f-name-error')],
+      email: [form.elements['email'], document.getElementById('f-email-error')],
+      area: [null, document.getElementById('f-topic-error')],
+      message: [form.elements['message'], document.getElementById('f-message-error')]
+    };
+    const validate = key => {
+      const msg = checks[key]();
+      const [el, errEl] = fields[key];
+      setError(el, errEl, msg);
+      if (key === 'area') topicSet.classList.toggle('invalid', !!msg);
+      return !msg;
+    };
+
+    // Re-validate a field once the visitor has interacted with it
+    ['name', 'email', 'message'].forEach(key => {
+      const el = fields[key][0];
+      el.addEventListener('blur', () => { if (el.value.trim()) validate(key); });
+      el.addEventListener('input', () => { if (el.getAttribute('aria-invalid') === 'true') validate(key); });
+    });
+    form.querySelectorAll('input[name="area"]').forEach(r => r.addEventListener('change', () => validate('area')));
+
+    const showStatus = (type, html) => {
+      statusEl.className = 'form-status ' + type;
+      statusEl.innerHTML = html;
+      statusEl.focus();
+    };
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (form.elements['_gotcha'] && form.elements['_gotcha'].value) return; // bot
+      const order = ['name', 'email', 'area', 'message'];
+      const results = order.map(validate);
+      const firstBad = order[results.indexOf(false)];
+      if (firstBad) {
+        statusEl.className = 'form-status';
+        statusEl.textContent = '';
+        (firstBad === 'area' ? form.querySelector('input[name="area"]') : fields[firstBad][0]).focus();
+        return;
+      }
+
+      const data = new FormData(form);
+      const endpoint = form.getAttribute('action') || '';
+
+      // Not configured yet: hand over to the visitor's email app instead
+      if (!/^https:\/\/formspree\.io\/f\/\w+/.test(endpoint)) {
+        const body = `Name: ${data.get('name')}\nEmail: ${data.get('email')}\nCompany: ${data.get('company') || '-'}\nArea: ${data.get('area')}\n\n${data.get('message')}`;
+        window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent('Let’s talk: ' + data.get('area'))}&body=${encodeURIComponent(body)}`;
+        showStatus('ok', `Your email app should open with your message ready to send. If it doesn’t, email me at <a href="mailto:${EMAIL}">${EMAIL}</a>.`);
+        return;
+      }
+
+      submitBtn.disabled = true;
+      const label = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Sending…';
+      try {
+        const res = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.reset();
+        form.querySelectorAll('[aria-invalid]').forEach(el => el.setAttribute('aria-invalid', 'false'));
+        showStatus('ok', 'Message received. I’ll get back to you soon.');
+      } catch (err) {
+        showStatus('error', `Sorry, that didn’t send. Please try again, or email me directly at <a href="mailto:${EMAIL}">${EMAIL}</a>.`);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = label;
+      }
+    });
+  }
+
   /* ---------- Footer year ---------- */
   const year = document.querySelector('.year');
   if (year) year.textContent = new Date().getFullYear();

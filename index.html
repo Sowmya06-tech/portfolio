@@ -384,19 +384,74 @@
   </ol>
 </section>
 
-<!-- ========================= CTA =========================
-     CONTACT DETAILS: replace ADD-YOUR-EMAIL (3 places) and ADD-YOUR-LINKEDIN (2 places)
-     here AND in the footer below. -->
+<!-- ========================= CTA / CONTACT =========================
+     CONTACT FORM: uses Formspree (free plan). Replace [ADD FORM ENDPOINT]
+     in the form's action="" below with your Formspree endpoint, e.g.
+     https://formspree.io/f/abcdwxyz  — see README.md → "Contact form". -->
 <section class="cta section" id="contact" aria-labelledby="contact-title">
   <div class="cta-inner">
     <p class="eyebrow dark-eyebrow"><span class="pulse" aria-hidden="true"></span> LET'S MAKE SOMETHING PEOPLE NOTICE.</p>
     <h2 id="contact-title">Need a marketing brain <em>on the problem?</em></h2>
     <p class="cta-sub">A product to launch, a pipeline to build, a marketing system to fix — or a marketing role to fill. Tell me what's going on.</p>
-    <div class="cta-actions">
-      <a class="cta-button" href="mailto:ADD-YOUR-EMAIL?subject=Let's%20talk%20marketing">Let's talk <span aria-hidden="true">↗</span></a>
-      <a class="cta-secondary" href="https://www.linkedin.com/in/ADD-YOUR-LINKEDIN" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+
+    <div class="contact-grid">
+      <form class="contact-form" id="contact-form" action="[ADD FORM ENDPOINT]" method="POST" aria-describedby="form-note">
+        <input type="hidden" name="_subject" value="New enquiry from your portfolio">
+        <!-- Spam trap: real visitors never see or fill this -->
+        <div class="hp" aria-hidden="true"><label for="f-company-site">Leave this empty</label><input id="f-company-site" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-error">
+            <p class="field-error" id="f-name-error"></p>
+          </div>
+          <div class="field">
+            <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-error">
+            <p class="field-error" id="f-email-error"></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-company">Company / Organisation <span class="opt">(optional)</span></label>
+          <input id="f-company" name="company" type="text" autocomplete="organization">
+        </div>
+
+        <fieldset class="field topics" aria-describedby="f-topic-error">
+          <legend>Area <span class="req" aria-hidden="true">*</span></legend>
+          <div class="topic-list">
+            <label><input type="radio" name="area" value="Marketing / GTM" required><span>Marketing / GTM</span></label>
+            <label><input type="radio" name="area" value="Demand Generation"><span>Demand Generation</span></label>
+            <label><input type="radio" name="area" value="Growth"><span>Growth</span></label>
+            <label><input type="radio" name="area" value="ABM"><span>ABM</span></label>
+            <label><input type="radio" name="area" value="Campaigns"><span>Campaigns</span></label>
+            <label><input type="radio" name="area" value="Marketing Operations"><span>Marketing Operations</span></label>
+            <label><input type="radio" name="area" value="AI / Automation"><span>AI / Automation</span></label>
+            <label><input type="radio" name="area" value="Other"><span>Other</span></label>
+          </div>
+          <p class="field-error" id="f-topic-error"></p>
+        </fieldset>
+
+        <div class="field">
+          <label for="f-message">What can I help with? <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="f-message" name="message" rows="5" required minlength="10" placeholder="A bit about the problem, timeline or role…" aria-describedby="f-message-error"></textarea>
+          <p class="field-error" id="f-message-error"></p>
+        </div>
+
+        <div class="form-foot">
+          <button class="cta-button form-submit" type="submit">Let's talk <span aria-hidden="true">→</span></button>
+          <p class="form-note" id="form-note"><span aria-hidden="true">*</span> Required</p>
+        </div>
+        <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+      </form>
+
+      <aside class="contact-direct" aria-label="Other ways to reach me">
+        <p class="contact-direct-label">Prefer direct?</p>
+        <a class="contact-link" href="mailto:sowmyadevang@gmail.com"><small>Email</small><span>sowmyadevang@gmail.com</span></a>
+        <a class="contact-link" href="https://www.linkedin.com/in/sowmya-devang/" target="_blank" rel="noopener noreferrer"><small>LinkedIn</small><span>linkedin.com/in/sowmya-devang <b aria-hidden="true">↗</b></span></a>
+      </aside>
     </div>
-    <p class="cta-email">or email <a href="mailto:ADD-YOUR-EMAIL">[ADD YOUR EMAIL]</a></p>
   </div>
 </section>
 </main>
@@ -410,7 +465,7 @@
     <p><strong>Sowmya</strong> — Marketing, GTM &amp; Growth</p>
     <nav class="footer-links" aria-label="Footer">
       <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#experience">Experience</a>
-      <a href="mailto:ADD-YOUR-EMAIL">Email</a><a href="https://www.linkedin.com/in/ADD-YOUR-LINKEDIN" rel="noopener">LinkedIn</a>
+      <a href="mailto:sowmyadevang@gmail.com">Email</a><a href="https://www.linkedin.com/in/sowmya-devang/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </nav>
     <p>© <span class="year">2026</span></p>
   </div>

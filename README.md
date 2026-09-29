@@ -64,13 +64,23 @@ Search the project for these markers. Every one needs your real information:
 
 | Marker | File | What it is |
 | --- | --- | --- |
-| `ADD-YOUR-EMAIL` | `index.html` (3×) | Your email address (in the contact section and footer) |
-| `ADD-YOUR-LINKEDIN` | `index.html` (2×) | Your LinkedIn profile URL |
-| `[ADD YOUR EMAIL]` | `index.html` | Visible email text in the contact section |
+| `[ADD FORM ENDPOINT]` | `index.html` (contact form `action`) | Your Formspree endpoint. See **Contact form** below |
 | `[ADD VERIFIED DETAILS]` | `index.html` | Problem, role, strategy, execution and deliverables in each case study's "Case notes" |
 | `[ADD VERIFIED OUTCOME …]` | `index.html` | Case-study outcomes. Add only results you can verify, otherwise delete the line |
 | `[ADD YEARS]` `[ADD ROLE]` `[ADD COMPANY]` | `index.html` | Your roles in the Experience section |
 | `sowmya06-tech.github.io/portfolio` | `index.html`, `robots.txt`, `sitemap.xml` | Site URL. Change it only if you move to a custom domain |
+
+### Contact form
+The form in the Contact section uses **[Formspree](https://formspree.io)** (free plan, no server needed). Until it's connected, pressing **Let's talk** opens the visitor's email app with their message pre-filled, so no enquiries are lost.
+
+To connect it:
+1. Sign up free at <https://formspree.io> with `sowmyadevang@gmail.com` and confirm your email.
+2. Click **+ New Form**, name it "Portfolio", and choose `sowmyadevang@gmail.com` as the recipient.
+3. Copy the form's endpoint. It looks like `https://formspree.io/f/abcdwxyz`.
+4. In `index.html`, find `action="[ADD FORM ENDPOINT]"` and replace **only** `[ADD FORM ENDPOINT]` with your endpoint, e.g. `action="https://formspree.io/f/abcdwxyz"`. Commit.
+5. Test it on the live site: send yourself a message, check you see "Message received. I'll get back to you soon." and that the email arrives. (Formspree may ask you to confirm the very first submission.)
+
+Email and LinkedIn are set in the Contact section and footer of `index.html`: search for `sowmyadevang@gmail.com` and `sowmya-devang`.
 
 ### Personal info & copy
 All text is in `index.html`, section by section (Hero → Proof → What I solve → Selected work → Toolkit → Services → Beliefs → About → Process → Experience → Contact). Each section is marked with a comment like `<!-- ===== HERO ===== -->`.

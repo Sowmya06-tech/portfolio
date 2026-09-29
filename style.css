@@ -321,15 +321,55 @@ ul,ol{list-style:none;margin:0;padding:0}
 .cta h2{margin:40px 0 26px;text-wrap:balance}
 .cta h2 em{color:var(--dark);background:var(--yellow);padding:0 .15em;border-radius:.1em;box-decoration-break:clone;-webkit-box-decoration-break:clone;line-height:1.1}
 .cta-sub{font-size:clamp(17px,1.5vw,20px);max-width:620px;margin:0 auto 36px;line-height:1.5}
-.cta-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
-.cta-button,.cta-secondary{display:inline-flex;align-items:center;gap:14px;min-height:58px;padding:0 30px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;border:2px solid var(--dark);transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
-.cta-button{background:var(--dark);color:#fff}
-.cta-button span{color:var(--green)}
-.cta-secondary{background:var(--cream)}
-.cta-button:hover,.cta-secondary:hover{transform:translate(-3px,-3px);box-shadow:var(--shadow)}
-.cta-secondary:hover{background:var(--yellow)}
-.cta-email{margin:24px 0 0;font-size:14px}
-.cta-email a{font-weight:700}
+.cta-button{display:inline-flex;align-items:center;gap:14px;min-height:58px;padding:0 30px;border-radius:999px;font:700 17px var(--body);text-decoration:none;border:2px solid var(--dark);background:var(--dark);color:#fff;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
+.cta-button span{color:var(--green);display:inline-block;transition:transform .25s var(--ease)}
+.cta-button:hover{transform:translate(-3px,-3px);box-shadow:var(--shadow)}
+.cta-button:hover span{transform:translateX(4px)}
+
+/* Contact form */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(20px,3vw,36px);text-align:left;max-width:1000px;margin:0 auto;align-items:start}
+.contact-form{background:var(--cream);border:2px solid var(--dark);border-radius:var(--radius);box-shadow:8px 8px 0 var(--dark);padding:clamp(20px,3vw,36px)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.field{margin:0 0 18px;min-width:0}
+.field label,.topics legend{display:block;font:600 14px var(--body);margin-bottom:8px}
+.req{color:#B42323}
+.opt{font-weight:400;color:var(--muted)}
+.field input,.field textarea{width:100%;font:400 16px/1.4 var(--body);color:var(--dark);background:#fff;border:2px solid var(--dark);border-radius:12px;padding:13px 14px;transition:box-shadow .2s,border-color .2s}
+.field textarea{resize:vertical;min-height:130px}
+.field input::placeholder,.field textarea::placeholder{color:#8a847c}
+.field input:focus,.field textarea:focus{outline:none;box-shadow:4px 4px 0 var(--blue);border-color:var(--blue)}
+.field [aria-invalid="true"]{border-color:#B42323;box-shadow:4px 4px 0 var(--coral)}
+.field-error{margin:6px 0 0;font-size:13px;font-weight:600;color:#B42323;min-height:0}
+.field-error:empty{display:none}
+.topics{border:0;padding:0;margin-inline:0}
+.topics legend{padding:0}
+.topic-list{display:flex;flex-wrap:wrap;gap:8px}
+.topic-list label{position:relative;margin:0;cursor:pointer}
+.topic-list input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer;z-index:1}
+.topic-list span{display:inline-block;padding:9px 14px;border:2px solid var(--dark);border-radius:999px;background:#fff;font:600 14px var(--body);transition:background .2s,transform .2s var(--ease),box-shadow .2s}
+.topic-list label:hover span{transform:translateY(-2px)}
+.topic-list input:checked+span{background:var(--yellow);box-shadow:3px 3px 0 var(--dark)}
+.topic-list input:focus-visible+span{outline:3px solid var(--blue);outline-offset:3px}
+.topics.invalid .topic-list span{border-color:#B42323}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:6px}
+.form-note{margin:0;font-size:13px;color:var(--muted)}
+.form-submit[disabled]{opacity:.7;cursor:progress;transform:none;box-shadow:none}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-status{margin-top:16px;font-weight:600;line-height:1.45}
+.form-status:empty{display:none}
+.form-status:focus{outline:none}
+.form-status.ok{padding:14px 16px;border:2px solid var(--dark);border-radius:12px;background:var(--green)}
+.form-status.error{padding:14px 16px;border:2px solid #B42323;border-radius:12px;background:#fff;color:#8E1B1B}
+.form-status a{color:inherit;font-weight:700}
+.contact-direct{display:flex;flex-direction:column;gap:12px}
+.contact-direct-label{margin:0 0 4px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.contact-link{display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:2px solid var(--dark);text-decoration:none;transition:padding .3s var(--ease)}
+.contact-link:last-child{border-bottom:2px solid var(--dark)}
+.contact-link small{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.contact-link span{font:600 clamp(17px,1.7vw,21px)/1.2 var(--display);letter-spacing:-.02em;overflow-wrap:anywhere}
+.contact-link b{display:inline-block;transition:transform .25s var(--ease)}
+.contact-link:hover{padding-left:10px}
+.contact-link:hover b{transform:translate(3px,-3px)}
 
 /* ---------- Footer ---------- */
 .footer{background:var(--dark);color:#fff;padding:60px var(--gutter) 34px}
@@ -406,6 +446,7 @@ ul,ol{list-style:none;margin:0;padding:0}
   .timeline>div:nth-child(2){border-right:0}
   .timeline>div:nth-child(n+3){border-top:1px solid var(--line)}
   .footer-bottom{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
 }
 
 @media (max-width:600px){
@@ -451,7 +492,9 @@ ul,ol{list-style:none;margin:0;padding:0}
   .timeline>div:first-child{border-top:0}
   .roles li{grid-template-columns:1fr;gap:4px}
   .cta h2{font-size:clamp(40px,12vw,60px)}
-  .cta-actions a{flex:1 1 100%;justify-content:center}
+  .contact-form{box-shadow:5px 5px 0 var(--dark)}
+  .field-row{grid-template-columns:1fr}
+  .form-submit{width:100%;justify-content:center}
   .cta::before{width:200px;left:-130px;top:-130px}
   .cta::after{width:160px;right:-90px;bottom:-100px}
   .footer-top{flex-direction:column;align-items:start}
